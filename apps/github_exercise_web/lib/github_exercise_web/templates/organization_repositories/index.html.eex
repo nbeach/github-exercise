@@ -1,0 +1,29 @@
+<section class="flex organization-repositories">
+    <form class="well organization-form-container" method="get">
+        <input
+            class="organization-name-input form-control-large"
+            data-test-handle="organization-name-input"
+            type="text"
+            placeholder="Enter an Organization Name"
+            name="organization_name"
+            value="<%= @view.organization_name %>">
+        <input class="form-control-large button list-repositories-button" type="submit" value="List Repositories">
+    </form>
+    <br>
+     <%= if @view.organization_name !== nil  do %>
+    <section class="well repository-list-container flex">
+        <%= if @view.organization_not_found do %>
+          <strong data-test-handle="not-found-message">That organization doesn't seem to exist.</strong>
+        <% else %>
+          <span data-test-handle="repository-list-header">
+              <strong data-test-handle="organization-name"><%= @view.organization_name %></strong>
+              has <span data-test-handle="repository-count"><%= length(@view.repositories) %></span> repositories
+          </span>
+          <br>
+          <%= for repository <- @view.repositories do %>
+              <a href="<%= repository.url %>" target="_blank" data-test-handle="repository"><%= repository.name %> (<%= repository.watchers %> watchers)</a>
+          <% end %>
+        <% end %>
+    </section>
+    <% end %>
+</section>

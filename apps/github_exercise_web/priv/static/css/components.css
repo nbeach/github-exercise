@@ -1,0 +1,17 @@
+.well {
+    background-color: rgb(249, 249, 249);
+    padding: 1.5rem;
+    box-shadow: 0.10rem 0.10rem 0.30rem rgb(136, 136, 136);
+}
+
+.button {
+    background-color: rgb(46, 126, 219);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.form-control-large {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    border: 1px solid rgb(155, 155, 155);
+}

@@ -1,0 +1,20 @@
+.organization-repositories .organization-form-container {
+    display: flex;
+    width: 60%;
+    background-color: rgb(228, 228, 228);
+}
+
+.organization-repositories .repository-list-container {
+    width: 60%;
+}
+
+.organization-repositories .organization-name-input {
+    flex-grow: 1;
+    border-right: 0;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.organization-repositories .list-repositories-button {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
